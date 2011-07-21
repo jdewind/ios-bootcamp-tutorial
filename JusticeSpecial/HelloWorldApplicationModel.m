@@ -22,6 +22,10 @@ objection_register(HelloWorldApplicationModel)
   return [self.texties objectAtIndex:indexPath.row];
 }
 
+- (void)userTappedCellAt:(NSIndexPath *)path {
+  [self.controller showTextie:[self.texties objectAtIndex:path.row]];
+}
+
 - (void)dealloc {
   [_texties release];
 	[super dealloc];

@@ -14,5 +14,6 @@
   HelloWorldApplicationModel *_applicationModel;
 }
 
+- (void)showTextie:(NSString *)textie;
 @property (nonatomic, retain) HelloWorldApplicationModel *applicationModel;
 @end

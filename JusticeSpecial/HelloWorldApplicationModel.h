@@ -9,6 +9,7 @@
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfRowsInSection:(NSInteger)section;
 - (NSString *)textForIndexPath:(NSIndexPath *)indexPath;
+- (void)userTappedCellAt:(NSIndexPath *)path;
 
 @property (nonatomic, assign) HelloWorldTableViewController *controller;
 @property (nonatomic, retain) NSArray *texties;

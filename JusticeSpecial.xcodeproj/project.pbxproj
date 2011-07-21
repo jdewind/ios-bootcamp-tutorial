@@ -100,6 +100,7 @@
 		4B93973B13D8A8C1002EB17F /* HelloWorldTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93973913D8A8C1002EB17F /* HelloWorldTableViewController.m */; };
 		4B93973E13D8AFD3002EB17F /* HelloWorldApplicationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93973D13D8AFD3002EB17F /* HelloWorldApplicationModel.m */; };
 		4B93973F13D8AFD3002EB17F /* HelloWorldApplicationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93973D13D8AFD3002EB17F /* HelloWorldApplicationModel.m */; };
+		4BE0138713D8C05E00CCB6AF /* HelloWorldApplicationModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE0138613D8C05E00CCB6AF /* HelloWorldApplicationModelSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -282,6 +283,7 @@
 		4B93973913D8A8C1002EB17F /* HelloWorldTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloWorldTableViewController.m; sourceTree = "<group>"; };
 		4B93973C13D8AFD3002EB17F /* HelloWorldApplicationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldApplicationModel.h; sourceTree = "<group>"; };
 		4B93973D13D8AFD3002EB17F /* HelloWorldApplicationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloWorldApplicationModel.m; sourceTree = "<group>"; };
+		4BE0138613D8C05E00CCB6AF /* HelloWorldApplicationModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloWorldApplicationModelSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +372,7 @@
 				4B87229E13D867C600DB7856 /* Supporting Files */,
 				4B87239713D8771F00DB7856 /* JusticeSpecialObjectionModuleSpec.m */,
 				4B15636D13D886A3009A212D /* ApplicationBootstrapperSpec.m */,
+				4BE0138613D8C05E00CCB6AF /* HelloWorldApplicationModelSpec.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				4B93973613D8A6BD002EB17F /* ControllerBuilder.m in Sources */,
 				4B93973B13D8A8C1002EB17F /* HelloWorldTableViewController.m in Sources */,
 				4B93973F13D8AFD3002EB17F /* HelloWorldApplicationModel.m in Sources */,
+				4BE0138713D8C05E00CCB6AF /* HelloWorldApplicationModelSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
