@@ -12,6 +12,7 @@
 
 - (void)configure {
   [self bind:self.window toClass:[UIWindow class]];
+  [self bind:[TTNavigator navigator] toClass:[TTNavigator class]];
 }
 
 - (void)dealloc {

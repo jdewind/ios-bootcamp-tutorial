@@ -9,8 +9,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  CGSize screenSize = [UIScreen mainScreen].bounds.size;
-  self.window = [[[UIWindow alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, screenSize.height)] autorelease];  
+  self.window = [[[UIWindow alloc] initWithFrame:TTScreenBounds()] autorelease];  
   ObjectionInjector *injector = [Objection createInjector:[[[JusticeSpecialObjectionModule alloc] initWithWindow:self.window] autorelease]];
   [Objection setGlobalInjector:injector];
   ApplicationBootstrapper *bootstrapper = [[Objection globalInjector] getObject:[ApplicationBootstrapper class]];

@@ -1,17 +1,15 @@
 #import <Foundation/Foundation.h>
 #import "HelloWorldTableViewController.h"
+#import "ObjectionProvider.h"
 
 @interface HelloWorldApplicationModel : NSObject {
   HelloWorldTableViewController *_controller;
+  ObjectionProvider *_objectionProvider;
   NSArray *_texties;
 }
 
-- (NSInteger)numberOfSections;
-- (NSInteger)numberOfRowsInSection:(NSInteger)section;
-- (NSString *)textForIndexPath:(NSIndexPath *)indexPath;
-- (void)userTappedCellAt:(NSIndexPath *)path;
-
 @property (nonatomic, assign) HelloWorldTableViewController *controller;
-@property (nonatomic, retain) NSArray *texties;
+@property (nonatomic, retain) ObjectionProvider *objectionProvider;
 
+- (void)viewDidRequestModel;
 @end

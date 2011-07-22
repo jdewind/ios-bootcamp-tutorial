@@ -1,15 +1,15 @@
 #import <Foundation/Foundation.h>
-#import "ControllerBuilder.h"
+#import "RoutesBuilder.h"
 
 @interface ApplicationBootstrapper : NSObject {
   UIWindow *_window;
-  ControllerBuilder *_controllerBuilder;
-  UINavigationController *_navController;
+  TTNavigator *_navigator;
+  RoutesBuilder *_routesBuilder;
 }
 
-@property (nonatomic, retain) ControllerBuilder *controllerBuilder;
 @property (nonatomic, retain) UIWindow *window;
-@property (nonatomic, retain) UINavigationController *navController;
+@property (nonatomic, retain) TTNavigator *navigator;
+@property (nonatomic, retain) RoutesBuilder *routesBuilder;
 
 - (void)bootstrap;
 @end

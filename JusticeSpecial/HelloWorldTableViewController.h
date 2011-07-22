@@ -1,19 +1,10 @@
-//
-//  HelloWorldTableViewController.h
-//  JusticeSpecial
-//
-//  Created by Justin DeWind on 7/21/11.
-//  Copyright 2011 Atomic Object. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 @class HelloWorldApplicationModel;
 
-@interface HelloWorldTableViewController : UITableViewController {
+@interface HelloWorldTableViewController : TTTableViewController {
   HelloWorldApplicationModel *_applicationModel;
 }
 
-- (void)showTextie:(NSString *)textie;
 @property (nonatomic, retain) HelloWorldApplicationModel *applicationModel;
 @end

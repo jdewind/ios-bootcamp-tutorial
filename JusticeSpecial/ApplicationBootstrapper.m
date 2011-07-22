@@ -3,25 +3,23 @@
 
 @implementation ApplicationBootstrapper
 objection_register_singleton(ApplicationBootstrapper)
-objection_requires(@"window", @"controllerBuilder")
+objection_requires(@"window", @"routesBuilder", @"navigator")
 
 @synthesize window = _window;
-@synthesize controllerBuilder = _controllerBuilder;
-@synthesize navController = _navController;
+@synthesize navigator = _navigator;
+@synthesize routesBuilder = _routesBuilder;
 
 - (void)bootstrap {
-  UITableViewController *viewController = [self.controllerBuilder 
-                                           buildViewController:[HelloWorldTableViewController class] 
-                                           withNib:nil];
-  self.navController = [self.controllerBuilder 
-                                           buildNavControllerWithRootViewController:viewController];
-  [self.window addSubview:self.navController.view];
+  [self.routesBuilder buildAll];
+  if (![self.navigator restoreViewControllers]) {
+    [self.navigator openURLs:@"tt://hello_world", nil];
+  }
   [self.window makeKeyAndVisible];
 }
 
 - (void)dealloc {
-  [_navController release];
-  [_controllerBuilder release];
+  [_navigator release];
+  [_routesBuilder release];
   [_window release];
 	[super dealloc];
 }

@@ -1,32 +1,19 @@
 #import "HelloWorldApplicationModel.h"
+#import "HelloWorldDataSource.h"
 
 @implementation HelloWorldApplicationModel
 objection_register(HelloWorldApplicationModel)
+objection_requires(@"objectionProvider")
 
 @synthesize controller = _controller;
-@synthesize texties = _texties;
+@synthesize objectionProvider = _objectionProvider;
 
-- (void)awakeFromObjection {
-  self.texties = [NSArray arrayWithObjects:@"Patrick Bacon", @"SWanderson", @"GPatt", nil];
-}
-
-- (NSInteger)numberOfSections {
-  return 1;
-}
-
-- (NSInteger)numberOfRowsInSection:(NSInteger)section {
-  return self.texties.count;
-}
-
-- (NSString *)textForIndexPath:(NSIndexPath *)indexPath {
-  return [self.texties objectAtIndex:indexPath.row];
-}
-
-- (void)userTappedCellAt:(NSIndexPath *)path {
-  [self.controller showTextie:[self.texties objectAtIndex:path.row]];
+- (void)viewDidRequestModel {
+  self.controller.dataSource = [self.objectionProvider provide:[HelloWorldDataSource class]];
 }
 
 - (void)dealloc {
+  [_objectionProvider release];
   [_texties release];
 	[super dealloc];
 }
